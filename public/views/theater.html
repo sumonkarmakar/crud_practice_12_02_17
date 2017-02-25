@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row">
+    <form>
+
+    </form>
+   <table cellspacing="10">
+    <thead>
+        <tr>
+          <th>TheatreName</th>&nbsp;&nbsp;
+          <th>TheatreCity</th>&nbsp;&nbsp;
+          <th>TheatreAddress</th>&nbsp;&nbsp;
+          <th>Contact</th>&nbsp;&nbsp;
+        </tr>
+      </thead>
+      <tbody cellspacing="10">
+        <tr ng-repeat="t in theatreList">
+          <td>{{t.theatreName}}</td>
+          <td>{{t.theatreCity}}</td>
+          <td>{{t.theatreAddress}}</td>
+          <td>{{t.theatreContact}}</td>
+          <td>
+            <button type="button" class="btn btn-primary" ng-click="deleteTheatre(t)">Delete
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

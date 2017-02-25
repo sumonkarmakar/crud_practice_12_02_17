@@ -1,0 +1,53 @@
+<div class="container">
+	 <form>
+		<label>Select city:</label>
+		<select class="form-control" id="sel1" ng-options="city.cityName for city in cityList" ng-model="selectedCity">
+      	</select>
+      	{{selectedCity}}
+      	<label>Theatre Name:</label>
+		<select class="form-control" id="sel1" ng-options="t.theatreName for t in theatreList|filter:{theatreCity:selectedCity.cityName}" ng-model="selectedTheatre">
+	    </select>
+      	<label>Movie Name:</label>
+		<select class="form-control" id="sel1" ng-options="m.Title for
+		 m in movieList" ng-model="selectedMovie">
+      	</select>
+      	<label>From Date</label>
+      	<select class="form-control" id="date" name="fromDate" 		placeholder="MM/DD/YYYY" type="text"></select>
+      	
+
+      	<laStart date&nbsp;
+				<a href="#" class="button tiny" id="dp4" data-date-format="yyyy-mm-dd" data-date="2012-02-20">Change</a>
+		<label>To Date</label>
+      	<select class="form-control" id="date" name="toDate" 		placeholder="MM/DD/YYYY" type="text"></select>
+      	<button type="button" class="btn btn-primary" 
+	    ng-click="addShow()">Add</button>&nbsp;&nbsp;
+	    <button type="button" class="btn btn-primary" 
+	    ng-click="deleteShow()">Reset</button>
+	</form> 
+
+
+  <!--View all mapped movies-->           
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>City Name</th>
+		<th>Theatre Name</th>
+		<th>Movie Name</th>
+		<button type="button" class="btn btn-primary">Delete</button>
+      </tr>
+    </thead>
+    <tbody>
+     <tr ng-repeat="s in showList">
+		<td>{{s.theater.theatreCity}}</td>
+		<td>{{s.theater.theatreName}}</td>
+	    <td>{{s.movie.Title}}</td> 
+	    <!-- <button type="button" class="btn btn-primary">Delete</button> -->
+	    <td>
+
+	    </td>
+	</tr>	
+	<!-- <button type="button" class="btn btn-primary">Delete</button> -->
+	</tbody>
+	
+  </table>
+</div>

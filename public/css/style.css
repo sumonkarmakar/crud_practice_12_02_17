@@ -1,0 +1,19 @@
+body { padding-top:30px; }
+
+*{
+	padding: 0;margin: 0;
+}
+
+#content1:{
+	float: left;
+	widt:50%;
+} 
+
+#content2:{
+	float: right;
+	widt:50%;
+} 
+
+/*#content3:{
+
+}*/
